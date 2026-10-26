@@ -135,7 +135,8 @@ test.describe('Console plugin cards', () => {
       page.getByRole('heading', { name: 'Expose a VM with an HTTPS Route', exact: true }),
     ).toBeVisible();
     await expect(page.getByText('Create a dedicated test project', { exact: true })).toBeVisible();
-    
+  });
+
   test('opens the VM lifecycle states quick start', async ({ page }) => {
     await page.goto('/partner-labs-demos');
     await page.getByTestId('card-action-vm-lifecycle-states').click();
@@ -143,6 +144,15 @@ test.describe('Console plugin cards', () => {
       page.getByRole('heading', { name: 'Understanding VM lifecycle states', exact: true }),
     ).toBeVisible();
     await expect(page.getByText('Understand VM and VMI resources', { exact: true })).toBeVisible();
+  });
+
+  test('opens the static IP configuration quick start', async ({ page }) => {
+    await page.goto('/partner-labs-demos');
+    await page.getByTestId('card-action-static-ip-configuration').click();
+    await expect(
+      page.getByRole('heading', { name: 'VM Cookbook: Static IP Configuration', exact: true }),
+    ).toBeVisible();
+    await expect(page.getByText('Create a dedicated test project', { exact: true })).toBeVisible();
   });
 
   test('opens the custom VM templates quick start', async ({ page }) => {
