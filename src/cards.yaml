@@ -61,6 +61,12 @@
   body: Start a guided walkthrough for cloning virtual machines in OpenShift Virtualization.
   quickStartId: cloning-vms
 
+- id: network-policies-vms
+  kind: quickstart
+  title: "VM Cookbook: Network Policies for VMs"
+  body: Deny incoming traffic to a VM, then allow HTTP from a labeled client using NetworkPolicy.
+  quickStartId: network-policies-vms
+
 - id: pipeline
   kind: pipeline
   title: Tekton Pipeline
